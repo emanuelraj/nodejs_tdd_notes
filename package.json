@@ -2,9 +2,10 @@
   "name": "nodejs_tdd_notes",
   "version": "1.0.0",
   "description": "nodejs_tdd_sample_application",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "SET NODE_ENV=dev && node main.js",
+    "test": "mocha --timeout 10000"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,15 @@
   },
   "homepage": "https://github.com/emanuelraj/nodejs_tdd_notes#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "method-override": "^2.3.10",
-    "mongoose": "^5.0.16",
-    "morgan": "^1.9.0"
+    "body-parser": "^1.15.1",
+    "config": "^1.20.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.15",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "mocha": "^2.4.5"
   }
 }
