@@ -14,7 +14,8 @@ let options = {
               }; 
 
 //db connection     
- 
+
+//console.log(config.DBHost);
 mongoose.connect(config.DBHost, options);
 
 let db = mongoose.connection;

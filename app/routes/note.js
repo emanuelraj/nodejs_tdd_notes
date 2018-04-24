@@ -47,7 +47,7 @@ function getNote(req, res) {
  */
 function deleteNote(req, res) {
     Note.remove({_id : req.params.id}, (err, result) => {
-        res.json({ message: "Book successfully deleted!", result });
+        res.json({ message: "Note successfully deleted!", result });
     });
 }
 
@@ -59,7 +59,7 @@ function updateNote(req, res) {
         if(err) res.send(err);
         Object.assign(note, req.body).save((err, note) => {
             if(err) res.send(err);
-            res.json({ message: 'Book updated!', note });
+            res.json({ message: 'Note updated!', note });
         }); 
     });
 }
